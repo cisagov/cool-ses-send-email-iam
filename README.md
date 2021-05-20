@@ -15,6 +15,13 @@ the COOL.
   (specified in [backend.tf](backend.tf)).
 - Access to all of the Terraform remote states specified in
   [remote_states.tf](remote_states.tf).
+  - User accounts for all users must have been created previously.  We
+  recommend using the
+  [`cisagov/cool-users-non-admin`](https://github.com/cisagov/cool-users-non-admin)
+  repository to create users.
+  - Terraform in
+  [`cisagov/cool-dns-cyber.dhs.gov`](https://github.com/cisagov/cool-dns-cyber.dhs.gov)
+  must have been applied.
 
 ## Requirements ##
 

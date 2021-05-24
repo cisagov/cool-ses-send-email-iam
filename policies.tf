@@ -4,6 +4,7 @@ data "aws_iam_policy_document" "email_sending" {
   statement {
     actions = [
       "sts:AssumeRole",
+      "sts:TagSession",
     ]
 
     resources = [
@@ -29,6 +30,7 @@ data "aws_iam_policy_document" "suppression_list_management" {
   statement {
     actions = [
       "sts:AssumeRole",
+      "sts:TagSession",
     ]
 
     resources = [

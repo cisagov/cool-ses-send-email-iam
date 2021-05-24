@@ -1,24 +1,19 @@
-output "arn" {
-  value       = aws_instance.example.arn
-  description = "The EC2 instance ARN"
+output "email_sending_group" {
+  value       = aws_iam_group.email_sending
+  description = "The IAM group whose members are allowed to send email via SES."
 }
 
-output "availability_zone" {
-  value       = aws_instance.example.availability_zone
-  description = "The AZ where the EC2 instance is deployed"
+output "email_sending_policy" {
+  value       = aws_iam_policy.email_sending
+  description = "The IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account."
 }
 
-output "id" {
-  value       = aws_instance.example.id
-  description = "The EC2 instance ID"
+output "suppression_list_management_group" {
+  value       = aws_iam_group.suppression_list_management
+  description = "The IAM group whose members are allowed to manage the SES email suppression list."
 }
 
-output "private_ip" {
-  value       = aws_instance.example.private_ip
-  description = "The private IP of the EC2 instance"
-}
-
-output "subnet_id" {
-  value       = aws_instance.example.subnet_id
-  description = "The ID of the subnet where the EC2 instance is deployed"
+output "suppression_list_management_policy" {
+  value       = aws_iam_policy.suppression_list_management
+  description = "The IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account."
 }

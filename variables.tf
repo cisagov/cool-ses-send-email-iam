@@ -6,7 +6,7 @@
 
 variable "group_membership" {
   type        = list(object({ name = string, can_send_email = bool, can_manage_suppression_list = bool }))
-  description = "A list of the usernames of users that exist in the Users account comprising the members of the email sending group (e.g. [{name = \"lemmy.kilmister\", can_send_email = true, can_manage_suppression_list = true} {name = \"phil.taylor\", can_send_email = false, can_manage_suppression_list = true}, {name = \"eddie.clarke\", can_send_email = true, can_manage_suppression_list = false}])."
+  description = "A list of the usernames of users that exist in the Users account comprising the members of the email sending group (e.g. [{name = \"lemmy.kilmister\", can_send_email = true, can_manage_suppression_list = true}, {name = \"phil.taylor\", can_send_email = false, can_manage_suppression_list = true}, {name = \"eddie.clarke\", can_send_email = true, can_manage_suppression_list = false}])."
 }
 
 # ------------------------------------------------------------------------------

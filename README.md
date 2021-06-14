@@ -28,14 +28,14 @@ the COOL.
 | Name | Version |
 |------|---------|
 | terraform | ~> 0.12.0 |
-| aws | ~> 3.0 |
+| aws | ~> 3.38 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.0 |
-| aws.users | ~> 3.0 |
+| aws | ~> 3.38 |
+| aws.users | ~> 3.38 |
 | terraform | n/a |
 
 ## Modules ##
@@ -69,7 +69,7 @@ No modules.
 | email\_sending\_group\_name | The name of the IAM group whose members are allowed to send email via SES. | `string` | `"SES_cyber.dhs.gov_emailers"` | no |
 | email\_sending\_policy\_description | The description to associate with the IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account. | `string` | `"Allows the email sending group to assume the email sending role in the DNS account."` | no |
 | email\_sending\_policy\_name | The name of the IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account. | `string` | `"DNS-AssumeSesSendEmail-cyber.dhs.gov"` | no |
-| group\_membership | A list of the usernames of users that exist in the Users account comprising the members of the email sending group (e.g. [{name = "lemmy.kilmister", can\_send\_email = true, can\_manage\_suppression\_list = true} {name = "phil.taylor", can\_send\_email = false, can\_manage\_suppression\_list = true}, {name = "eddie.clarke", can\_send\_email = true, can\_manage\_suppression\_list = false}]). | `list(object({name = string, can_send_email = bool, can_manage_suppression_list = bool}))` | n/a | yes |
+| group\_membership | A list of the usernames of users that exist in the Users account comprising the members of the email sending group (e.g. [{name = "lemmy.kilmister", can\_send\_email = true, can\_manage\_suppression\_list = true}, {name = "phil.taylor", can\_send\_email = false, can\_manage\_suppression\_list = true}, {name = "eddie.clarke", can\_send\_email = true, can\_manage\_suppression\_list = false}]). | `list(object({ name = string, can_send_email = bool, can_manage_suppression_list = bool }))` | n/a | yes |
 | suppression\_list\_management\_group\_name | The name of the IAM group whose members are allowed to manage the SES email suppression list. | `string` | `"SES_cyber.dhs.gov_suppression_list_managers"` | no |
 | suppression\_list\_management\_policy\_description | The description to associate with the IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account. | `string` | `"Allows the suppression list management group to assume the suppression list management role in the DNS account."` | no |
 | suppression\_list\_management\_policy\_name | The name of the IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account. | `string` | `"DNS-AssumeSesManageSuppressionList-cyber.dhs.gov"` | no |

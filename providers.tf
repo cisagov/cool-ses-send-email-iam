@@ -2,6 +2,9 @@
 # credentials, which are used to set the session name when assuming roles in
 # the other providers.
 provider "aws" {
+  default_tags {
+    tags = var.tags
+  }
   region = var.aws_region
 }
 
@@ -11,6 +14,9 @@ provider "aws" {
   assume_role {
     role_arn     = data.terraform_remote_state.users.outputs.provisionaccount_role.arn
     session_name = local.caller_user_name
+  }
+  default_tags {
+    tags = var.tags
   }
   region = var.aws_region
 }

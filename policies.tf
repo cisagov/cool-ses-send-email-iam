@@ -21,7 +21,6 @@ resource "aws_iam_policy" "email_sending" {
   description = var.email_sending_policy_description
   name        = var.email_sending_policy_name
   policy      = data.aws_iam_policy_document.email_sending.json
-  tags        = var.tags
 }
 
 # The policy document that allows assumption of the email suppression
@@ -47,5 +46,4 @@ resource "aws_iam_policy" "suppression_list_management" {
   description = var.suppression_list_management_policy_description
   name        = var.suppression_list_management_policy_name
   policy      = data.aws_iam_policy_document.suppression_list_management.json
-  tags        = var.tags
 }

@@ -23,19 +23,20 @@ the COOL.
   [`cisagov/cool-dns-cyber.dhs.gov`](https://github.com/cisagov/cool-dns-cyber.dhs.gov)
   must have been applied.
 
+<!-- BEGIN_TF_DOCS -->
 ## Requirements ##
 
 | Name | Version |
 |------|---------|
 | terraform | ~> 1.0 |
-| aws | ~> 3.38 |
+| aws | ~> 4.9 |
 
 ## Providers ##
 
 | Name | Version |
 |------|---------|
-| aws | ~> 3.38 |
-| aws.users | ~> 3.38 |
+| aws | ~> 4.9 |
+| aws.users | ~> 4.9 |
 | terraform | n/a |
 
 ## Modules ##
@@ -83,6 +84,7 @@ No modules.
 | email\_sending\_policy | The IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account. |
 | suppression\_list\_management\_group | The IAM group whose members are allowed to manage the SES email suppression list. |
 | suppression\_list\_management\_policy | The IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account. |
+<!-- END_TF_DOCS -->
 
 ## Notes ##
 

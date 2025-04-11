@@ -75,6 +75,7 @@ No modules.
 | suppression\_list\_management\_policy\_description | The description to associate with the IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account. | `string` | `"Allows the suppression list management group to assume the suppression list management role in the DNS account."` | no |
 | suppression\_list\_management\_policy\_name | The name of the IAM policy in the Users account that allows the suppression list management group to assume the suppression list management role in the DNS account. | `string` | `"DNS-AssumeSesManageSuppressionList-cyber.dhs.gov"` | no |
 | tags | Tags to apply to all AWS resources created. | `map(string)` | `{}` | no |
+| terraform\_state\_bucket | The name of the S3 bucket where Terraform state is stored. | `string` | n/a | yes |
 
 ## Outputs ##
 

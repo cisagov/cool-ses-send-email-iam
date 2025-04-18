@@ -10,6 +10,12 @@ variable "group_membership" {
   type        = list(object({ name = string, can_send_email = bool, can_manage_suppression_list = bool }))
 }
 
+variable "terraform_state_bucket" {
+  description = "The name of the S3 bucket where Terraform state is stored."
+  nullable    = false
+  type        = string
+}
+
 # ------------------------------------------------------------------------------
 # OPTIONAL PARAMETERS
 #

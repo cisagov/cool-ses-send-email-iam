@@ -1,6 +1,8 @@
 # cool-ses-send-email-iam #
 
 [![GitHub Build Status](https://github.com/cisagov/cool-ses-send-email-iam/workflows/build/badge.svg)](https://github.com/cisagov/cool-ses-send-email-iam/actions)
+[![License](https://img.shields.io/github/license/cisagov/cool-ses-send-email-iam)](https://spdx.org/licenses/)
+[![CodeQL](https://github.com/cisagov/cool-ses-send-email-iam/workflows/CodeQL/badge.svg)](https://github.com/cisagov/cool-ses-send-email-iam/actions/workflows/codeql-analysis.yml)
 
 This is a Terraform deployment for creating IAM resources for those
 users allowed to send email or manage the email suppression list in

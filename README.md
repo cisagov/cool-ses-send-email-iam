@@ -29,14 +29,14 @@ the COOL.
 ## Requirements ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | terraform | ~> 1.1 |
 | aws | ~> 6.7 |
 
 ## Providers ##
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | aws | ~> 6.7 |
 | aws.users | ~> 6.7 |
 | terraform | n/a |
@@ -48,7 +48,7 @@ No modules.
 ## Resources ##
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_iam_group.email_sending](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group.suppression_list_management](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group) | resource |
 | [aws_iam_group_policy_attachment.email_sending](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_group_policy_attachment) | resource |
@@ -67,7 +67,7 @@ No modules.
 ## Inputs ##
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | aws\_region | The AWS region in which resources are to be created (e.g. us-east-1). | `string` | `"us-east-1"` | no |
 | email\_sending\_group\_name | The name of the IAM group whose members are allowed to send email via SES. | `string` | `"SES_cyber.dhs.gov_emailers"` | no |
 | email\_sending\_policy\_description | The description to associate with the IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account. | `string` | `"Allows the email sending group to assume the email sending role in the DNS account."` | no |
@@ -82,7 +82,7 @@ No modules.
 ## Outputs ##
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | email\_sending\_group | The IAM group whose members are allowed to send email via SES. |
 | email\_sending\_policy | The IAM policy in the Users account that allows the email sending group to assume the email sending role in the DNS account. |
 | suppression\_list\_management\_group | The IAM group whose members are allowed to manage the SES email suppression list. |
